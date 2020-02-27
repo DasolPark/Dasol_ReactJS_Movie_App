@@ -2,6 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+
+.movie-detail.a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .movie-detail.ui.segment {
