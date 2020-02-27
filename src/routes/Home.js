@@ -1,9 +1,10 @@
 import React from 'react';
 import axios from 'axios';
 import MovieList from '../components/MovieList';
+import MovieDetail from '../components/MovieDetail';
 
 class Home extends React.Component {
-  state = { movies: [] };
+  state = { movies: [], selectMovie: null };
 
   getMovies = async () => {
     const {
@@ -15,7 +16,11 @@ class Home extends React.Component {
     );
 
     console.log(movies);
-    this.setState({ movies });
+    this.setState({ movies, selectMovie: movies[0] });
+  };
+
+  onSelectMovie = movie => {
+    this.setState({ selectMovie: movie });
   };
 
   componentDidMount() {
@@ -25,7 +30,11 @@ class Home extends React.Component {
   render() {
     return (
       <div className="ui container">
-        <MovieList movies={this.state.movies}></MovieList>
+        <MovieDetail movie={this.state.selectMovie}></MovieDetail>
+        <MovieList
+          movies={this.state.movies}
+          onSelectMovie={this.onSelectMovie}
+        ></MovieList>
       </div>
     );
   }

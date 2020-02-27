@@ -1,0 +1,14 @@
+.nav.ui.container.header {
+  margin-top: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.nav.ui.container.header a:not(:last-child) {
+  margin-right: 10px;
+}
+
+.nav.ui.container.header a:hover {
+  text-decoration: underline;
+}

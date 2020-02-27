@@ -5,13 +5,15 @@
 
 # Goals
 
-## Pages
+## Components & Routers
 
 - [x]: Home(Sort by rating)
 - [x]: Movie List
 - [x]: Movie Card
-- [ ]: Movie Detail(Picked movie's detail)
+- [x]: Movie Detail(Picked movie's detail)
 - [ ]: Year(Sort by latest year)
+- [x]: Navigation(Home, Year)
+- [ ]: Loader
 
 ## Etc
 
