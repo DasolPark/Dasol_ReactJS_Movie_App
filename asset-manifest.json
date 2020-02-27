@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Dasol_ReactJS_Movie_App/static/css/main.55efddef.chunk.css",
+    "main.js": "/Dasol_ReactJS_Movie_App/static/js/main.2a34ea70.chunk.js",
+    "main.js.map": "/Dasol_ReactJS_Movie_App/static/js/main.2a34ea70.chunk.js.map",
+    "runtime-main.js": "/Dasol_ReactJS_Movie_App/static/js/runtime-main.1f2f8028.js",
+    "runtime-main.js.map": "/Dasol_ReactJS_Movie_App/static/js/runtime-main.1f2f8028.js.map",
+    "static/js/2.2c249e91.chunk.js": "/Dasol_ReactJS_Movie_App/static/js/2.2c249e91.chunk.js",
+    "static/js/2.2c249e91.chunk.js.map": "/Dasol_ReactJS_Movie_App/static/js/2.2c249e91.chunk.js.map",
+    "index.html": "/Dasol_ReactJS_Movie_App/index.html",
+    "precache-manifest.936fc5ed058bbbaa0f9ed3144cf15cbe.js": "/Dasol_ReactJS_Movie_App/precache-manifest.936fc5ed058bbbaa0f9ed3144cf15cbe.js",
+    "service-worker.js": "/Dasol_ReactJS_Movie_App/service-worker.js",
+    "static/css/main.55efddef.chunk.css.map": "/Dasol_ReactJS_Movie_App/static/css/main.55efddef.chunk.css.map",
+    "static/js/2.2c249e91.chunk.js.LICENSE.txt": "/Dasol_ReactJS_Movie_App/static/js/2.2c249e91.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1f2f8028.js",
+    "static/js/2.2c249e91.chunk.js",
+    "static/css/main.55efddef.chunk.css",
+    "static/js/main.2a34ea70.chunk.js"
+  ]
+}
