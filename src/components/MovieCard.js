@@ -7,7 +7,7 @@ const MovieCard = ({ movie, onSelectMovie }) => {
       <img src={movie.medium_cover_image} alt={movie.title}></img>
       <div className="movie-content">
         <h5>{movie.title}</h5>
-        <p>{movie.summary.slice(0, 80)}</p>
+        <p>{movie.summary.slice(0, 100)}...</p>
       </div>
     </div>
   );
