@@ -4,7 +4,7 @@ import MovieList from '../components/MovieList';
 import MovieDetail from '../components/MovieDetail';
 
 class Home extends React.Component {
-  state = { movies: [], selectMovie: null };
+  state = { isLoading: true, movies: [], selectMovie: null };
 
   getMovies = async () => {
     const {
@@ -15,11 +15,12 @@ class Home extends React.Component {
       'https://yts.mx/api/v2/list_movies.json?sort_by=rating'
     );
 
-    console.log(movies);
-    this.setState({ movies, selectMovie: movies[0] });
+    this.setState({ movies, selectMovie: movies[0], isLoading: false });
   };
 
   onSelectMovie = movie => {
+    window.scrollTo(0, 0);
+
     this.setState({ selectMovie: movie });
   };
 
@@ -27,7 +28,23 @@ class Home extends React.Component {
     this.getMovies();
   }
 
-  render() {
+  renderContent = () => {
+    if (this.state.isLoading) {
+      return (
+        <div
+          className="ui container"
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            minHeight: '100vh',
+            fontWeight: 600
+          }}
+        >
+          Loading...
+        </div>
+      );
+    }
     return (
       <div className="ui container">
         <MovieDetail movie={this.state.selectMovie}></MovieDetail>
@@ -37,6 +54,10 @@ class Home extends React.Component {
         ></MovieList>
       </div>
     );
+  };
+
+  render() {
+    return <div>{this.renderContent()}</div>;
   }
 }
 

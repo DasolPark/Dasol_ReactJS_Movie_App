@@ -1,8 +1,12 @@
 .nav.ui.container.header {
-  margin-top: 5px;
+  margin: 15px 0;
   padding: 10px;
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
+}
+
+a {
+  text-transform: uppercase;
 }
 
 .nav.ui.container.header a:not(:last-child) {

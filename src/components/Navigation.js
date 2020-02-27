@@ -5,8 +5,8 @@ import './Navigation.css';
 const Navigation = () => {
   return (
     <div className="nav ui container header">
-      <Link to="/">Home</Link>
-      <Link to="/year">Year</Link>
+      <Link to="/">Top rated</Link>
+      <Link to="/year">Latest</Link>
     </div>
   );
 };

@@ -3,7 +3,6 @@ import './MovieDetail.css';
 
 const MovieDetail = ({ movie }) => {
   if (movie) {
-    console.log(movie);
     return (
       <div className="movie-detail ui segment">
         <img src={movie.medium_cover_image} alt={movie.title}></img>
@@ -14,8 +13,14 @@ const MovieDetail = ({ movie }) => {
               <span key={index}>{genre}</span>
             ))}
           </h5>
-          <h5>{movie.year}</h5>
-          <h5>{movie.rating}</h5>
+          <h5>{movie.year} 🎞</h5>
+          <h5>
+            {movie.rating}/10{' '}
+            <span role="img" aria-label="close">
+              ⭐
+            </span>
+          </h5>
+          <h5>{movie.runtime} minutes</h5>
           <p>{movie.summary}</p>
         </div>
       </div>

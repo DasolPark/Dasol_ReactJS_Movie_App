@@ -4,7 +4,7 @@ import MovieList from '../components/MovieList';
 import MovieDetail from '../components/MovieDetail';
 
 class Year extends React.Component {
-  state = { movies: [], selectMovie: null };
+  state = { isLoading: true, movies: [], selectMovie: null };
 
   getMovies = async () => {
     const {
@@ -13,11 +13,12 @@ class Year extends React.Component {
       }
     } = await axios.get('https://yts.mx/api/v2/list_movies.json?sort_by=year');
 
-    console.log(movies);
-    this.setState({ movies, selectMovie: movies[0] });
+    this.setState({ movies, selectMovie: movies[0], isLoading: false });
   };
 
   onSelectMovie = movie => {
+    window.scrollTo(0, 0);
+
     this.setState({ selectMovie: movie });
   };
 
@@ -25,7 +26,23 @@ class Year extends React.Component {
     this.getMovies();
   }
 
-  render() {
+  renderContent = () => {
+    if (this.state.isLoading) {
+      return (
+        <div
+          className="ui container"
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            minHeight: '100vh',
+            fontWeight: 600
+          }}
+        >
+          Loading...
+        </div>
+      );
+    }
     return (
       <div className="ui container">
         <MovieDetail movie={this.state.selectMovie}></MovieDetail>
@@ -35,6 +52,10 @@ class Year extends React.Component {
         ></MovieList>
       </div>
     );
+  };
+
+  render() {
+    return <div>{this.renderContent()}</div>;
   }
 }
 
