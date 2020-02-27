@@ -1,0 +1,9 @@
+.movie-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-card img {
+  max-width: 100px;
+}

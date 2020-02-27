@@ -6,11 +6,16 @@ class Home extends React.Component {
   state = { movies: [] };
 
   getMovies = async () => {
-    const response = await axios.get(
+    const {
+      data: {
+        data: { movies }
+      }
+    } = await axios.get(
       'https://yts.mx/api/v2/list_movies.json?sort_by=rating'
     );
 
-    console.log(response);
+    console.log(movies);
+    this.setState({ movies });
   };
 
   componentDidMount() {
@@ -20,7 +25,7 @@ class Home extends React.Component {
   render() {
     return (
       <div className="ui container">
-        <MovieList></MovieList>
+        <MovieList movies={this.state.movies}></MovieList>
       </div>
     );
   }

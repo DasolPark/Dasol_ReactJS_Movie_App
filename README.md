@@ -6,12 +6,16 @@
 # Goals
 
 ## Pages
-- [ ]: Home(Sort by rating)
-- [ ]: Year(Sort by rating and latest year)
-- [ ]: Detail(Picked Movie)
+
+- [x]: Home(Sort by rating)
+- [x]: Movie List
+- [x]: Movie Card
+- [ ]: Movie Detail(Picked movie's detail)
+- [ ]: Year(Sort by latest year)
 
 ## Etc
-- [ ]: Get movie list with axios from yts API
-- [ ]: Route with react-router-dom
+
+- [x]: Get movie list with axios from yts API
+- [x]: Route with react-router-dom
 - [ ]: Styling with Semantic-ui
 - [ ]: gh-pages
